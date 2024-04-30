@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root {
+    /* Primairy Colors */
+    --orange: hsl(26, 100%, 55%);
+    --pale-orange: hsl(25, 100%, 94%);
+
+    /* Neutral Colors */
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-blue: hsl(220, 13%, 13%);
+    --greyish-blue: hsl(220, 14%, 75%);
+    --light-greyish-blue: hsl(223, 64%, 98%);
+    --dark-greyish-blue: hsl(219, 9%, 45%);
+}
+
+* {
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 500;
+    color: grey;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* 
+*                                       HEADER 
+*/
+header {
+    padding: 1rem 0;
+    position: relative;
+}
+
+.modal-dialog {
+    width: fit-content;
+}
+
+.modal-body {
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-empty {
+    font-weight: 700 !important;
+}
+
+.modal-title {
+    font-weight: 700;
+    font-size: 1rem !important;
+}
+
+.modal img {
+    max-width: 50px;
+    border-radius: 5px;
+}
+
+.modal p {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+#toggle-menu {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+}
+
+#delete-item {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#checkout {
+    background-color: var(--orange);
+    height: 40px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.navbar::after {
+    content: "";
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--greyish-blue);
+    opacity: 35%;
+}
+
+.nav-link {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: grey;
+}
+
+.nav-button {
+    border: none;
+    background-color: transparent;
+}
+
+.offcanvas a {
+    font-weight: 700;
+    color: var(--black);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .modal {
+        position: absolute;
+        top: 100%;
+        height: fit-content;
+        display: flex !important;
+        justify-content: center;
+    }
+}
+
+/* 
+*                                       MAIN
+*/
+main {
+    height: calc(100vh - 84.39px);
+    display: flex;
+    align-items: center;
+}
+
+main .col-12 {
+    padding: 0 4rem;
+}
+
+/* SWIPER FOR LARGE SCREENS*/
+.lg-product-swiper .swiper {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.lg-product-swiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.lg-product-swiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.lg-product-swiper .swiper-pagination {
+    position: static;
+}
+
+.lg-product-swiper .swiper-pagination-bullet,
+.lg-product-swiper .swiper-pagination-bullet-active {
+    width: 100%;
+    height: fit-content;
+    color: transparent;
+    background-color: transparent;
+}
+
+.lg-product-swiper .thumbnail {
+    border-radius: 10px;
+}
+
+/* SWIPER FOR SMALL SCREENS */
+.sm-product-swiper .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.sm-product-swiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sm-product-swiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--black);
+    background-color: var(--white);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.item-header h1 {
+    font-weight: 700;
+}
+
+.item-header h2 {
+    color: var(--orange);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.current-item-price {
+    font-weight: 700;
+    width: fit-content;
+    position: relative;
+}
+
+.current-item-price::after {
+    content: "50%";
+    position: absolute;
+    top: 15%;
+    right: -65%;
+    bottom: 15%;
+    width: 50px;
+    background-color: var(--pale-orange);
+    color: var(--orange);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.former-item-price {
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: line-through;
+    color: var(--greyish-blue);
+}
+
+.quantity {
+    background-color: var(--light-greyish-blue);
+    box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.15);
+    border-radius: 8px;
+}
+
+.quantity button {
+    background-color: transparent;
+    border: none;
+}
+
+.quantity input {
+    width: 75px;
+    text-align: center;
+    font-weight: 700;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.quantity input::-webkit-outer-spin-button,
+.quantity input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    margin: 0;
+}
+
+#add-to-cart {
+    background-color: var(--orange);
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--white);
+    box-shadow: 2px 2px 20px hsla(26, 100%, 55%, 0.5);
+}
+
+#add-to-cart img {
+    filter: brightness(0) saturate(100%) invert(99%) sepia(12%) saturate(1245%) hue-rotate(198deg) brightness(118%)
+        contrast(100%);
+    height: 18px;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        height: auto;
+    }
+
+    .quantity,
+    #add-to-cart {
+        height: 50px;
+    }
+
+    .quantity input {
+        width: 100%;
+    }
+}
