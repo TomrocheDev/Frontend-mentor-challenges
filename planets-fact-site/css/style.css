@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
+@font-face {
+    font-family: "Spartan Regular";
+    src: url(../assets/fonts/Spartan-Regular.ttf);
+}
+@font-face {
+    font-family: "Spartan Bold";
+    src: url(../assets/fonts/Spartan-Bold.ttf);
+}
+
+:root {
+    --bg-main: #070724;
+    --white: #fff;
+    --dark-grey: #38384f;
+    --light-grey: #838391;
+    --lighter-grey: #83839154;
+    --greenish-blue: #419ebb;
+    --yellow: #eda249;
+    --purple: #6f2ed6;
+    --orange-light: #d14c32;
+    --orange-dark: #cd5120;
+    --red: #d83a34;
+    --lime: #1ec2a4;
+    --blue: #2d68f0;
+
+    --ff-1: "Antonio", sans-serif;
+    --ff-2: "Spartan Regular", sans-serif;
+    --ff-3: "Spartan Bold", sans-serif;
+
+    --fs-heading-1: 80px;
+    --fs-heading-2: 40px;
+    --fs-heading-3: 12px;
+    --fs-heading-4: 11px;
+    --fs-main: 14px; 
+
+    --transition: 0.2s ease-out;
+}
+
+:is(h1, h2) {
+    font-family: var(--ff-1);
+}
+:is(h3,h4) {
+    font-family: var(--ff-3);
+}
+
+body {
+    font-family: var(--ff-2);
+    font-size: var(--fs-main);
+    background-color: var(--bg-main);
+    background-image: url(../assets/background-stars.svg);
+    background-position: center;
+    background-size: cover;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+header {
+    border-bottom: 1px solid var(--lighter-grey);
+}
+
+header .container-fluid {
+    padding-inline: 35px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 85px;
+}
+
+nav :is(span, a.link) {
+    text-transform: uppercase;
+}
+
+nav .logo {
+    font-size: 28px;
+    color: var(--white);
+    font-family: var(--ff-1);
+}
+
+nav a.link {
+    font-family: var(--ff-3);
+    color: var(--light-grey);
+    transition: var(--transition);
+    text-decoration: none;
+    display: block;
+    padding-block: 15px;
+    &:hover {
+        color: var(--white);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    nav .logo {
+        padding-block-start: 20px;
+        padding-block-end: 10px;
+    }
+}
+
+/* Mobile menu */
+#toggle-mm-menu {
+    width: 40px;
+    height: 40px;
+    background-image: url(../assets/icon-hamburger.svg);
+    background-size: 80%;
+    background-position: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.offcanvas {
+    width: 100vw !important;
+    background-color: var(--bg-main);
+}
+
+.offcanvas-header .btn-close {
+    filter: invert(1);
+}
+
+.offcanvas li {
+    position: relative;
+    padding-inline-start: 40px;
+    padding-block: 12px;
+    border-bottom: 1px solid var(--lighter-grey);
+}
+
+.offcanvas li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.offcanvas a {
+    color: var(--white) !important;
+}
+
+[data-color="greenish-blue"]::after {
+    background-color: var(--greenish-blue);
+}[data-color="yellow"]::after {
+    background-color: var(--yellow);
+}[data-color="purple"]::after {
+    background-color: var(--purple);
+}[data-color="orange-light"]::after {
+    background-color: var(--orange-light);
+}[data-color="red"]::after {
+    background-color: var(--red);
+}[data-color="orange-dark"]::after {
+    background-color: var(--orange-dark);
+}[data-color="lime"]::after {
+    background-color: var(--lime);
+}[data-color="blue"]::after {
+    background-color: var(--blue);
+}
