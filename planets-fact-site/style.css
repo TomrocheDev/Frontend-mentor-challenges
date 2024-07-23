@@ -5,7 +5,7 @@
 }
 @font-face {
     font-family: "Spartan Bold";
-    src: url(../assets/fonts/Spartan-Bold.ttf);
+    src: url(../assets/fonts/Spartan-Bold.ttf) format("ttf");
 }
 
 :root {
