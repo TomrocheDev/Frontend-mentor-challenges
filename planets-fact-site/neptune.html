@@ -14,7 +14,53 @@
         <title>Planet Fact Site || Created by Tom Roche</title>
     </head>
     <body data-planet="Neptune">
-        <header></header>
+        <header>
+            <div class="container-fluid">
+                <nav class="d-flex flex-row flex-md-column flex-lg-row">
+                    <span class="logo">The Planets</span>
+                    <button
+                        id="toggle-mm-menu"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#mm-menu"
+                        aria-controls="mm-menu"
+                        class="d-md-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17">
+                            <g fill="#FFF" fill-rule="evenodd"><path d="M0 0h24v3H0zM0 7h24v3H0zM0 14h24v3H0z" /></g>
+                        </svg>
+                    </button>
+            
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="mm-menu" aria-labelledby="mm-menuLabel">
+                        <div class="offcanvas-header">
+                            <span class="logo">The Planets</span>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul>
+                                <li data-bg-color="greenish-blue"><a href="index.html" class="link">Mercury</a></li>
+                                <li data-bg-color="yellow"><a href="venus.html" class="link">Venus</a></li>
+                                <li data-bg-color="purple"><a href="earth.html" class="link">Earth</a></li>
+                                <li data-bg-color="orange-light"><a href="mars.html" class="link">Mars</a></li>
+                                <li data-bg-color="red"><a href="jupiter.html" class="link">Jupiter</a></li>
+                                <li data-bg-color="orange-dark"><a href="saturn.html" class="link">Saturn</a></li>
+                                <li data-bg-color="lime"><a href="uranus.html" class="link">Uranus</a></li>
+                                <li data-bg-color="blue"><a href="neptune.html" class="link">Neptune</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="d-none d-md-flex align-items-center gap-md-4 gap-lg-5">
+                        <li><a href="index.html" class="link">Mercury</a></li>
+                        <li><a href="venus.html" class="link">Venus</a></li>
+                        <li><a href="earth.html" class="link">Earth</a></li>
+                        <li><a href="mars.html" class="link">Mars</a></li>
+                        <li><a href="jupiter.html" class="link">Jupiter</a></li>
+                        <li><a href="saturn.html" class="link">Saturn</a></li>
+                        <li><a href="uranus.html" class="link">Uranus</a></li>
+                        <li><a href="neptune.html" class="link">Neptune</a></li>
+                    </ul>
+                </nav>
+            </div>            
+        </header>
         <div class="button-group button-group-mm d-flex d-md-none justify-content-between">
             <button class="button button-mm active" data-index="0">
                 <span>Overview</span>

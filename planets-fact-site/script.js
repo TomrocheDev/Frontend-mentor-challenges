@@ -56,7 +56,6 @@ async function createPage(planetName) {
 
 $(document).ready(function () {
     const currentPlanet = $("body").data("planet");
-    $("header").load("includes/header.html");
     createPage(currentPlanet);
 
     $(".button-group button").on("click", function () {
